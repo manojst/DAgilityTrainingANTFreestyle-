@@ -16,7 +16,6 @@
 		<mkdir dir="${builddir}/${clsdir}"/>
 		<javac srcdir="${srcdir}" destdir="${builddir}/${clsdir}"/>
 	</target>
-
 	<target name="package" depends="compile">
 		<mkdir dir="${builddir}/${jardir}"/>
 		<jar basedir="${builddir}/${clsdir}" destfile="${builddir}/${jardir}/${filename}.jar">
@@ -25,24 +24,5 @@
 			</manifest>
 		</jar>
 	</target>
-	<target name="run" depends="package">
-	</target>	
-
-	<!--<target name="test">
-		<echo>File system tasks</echo>
-		<mkdir dir="build/classes"/>
-		<delete dir="build"/>
-		<delete file="myManifest"/>
-		<copy file="Hi.txt" tofile="Hello.txt"/>
-		<copy file="Hi.txt" todir="build"/>
-		 <copy todir="build">
-                        <fileset dir="src"/>
-                </copy>
-		<copy todir="build">
-			<fileset dir="src">
-				<include name="*.java"/>
-			</fileset>
-		</copy>
-		<move file="xyz.txt" todir="build"/>
-	</target>-->
+	<target name="run" depends="package"></target>	
 </project>
