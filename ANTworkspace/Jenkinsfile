@@ -1,5 +1,4 @@
-def antVersion = 'Ant1.9.1'
+def antVersion = 'Ant1.9.2'
 withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-    sh "cd ${WORKSPACE}/ANTworkspace;
-    sh '$ANT_HOME/bin/ant target1 target2'
+    sh "cd ${WORKSPACE}/ANTworkspace; $ANT_HOME/bin/ant target1 target2"
 }
