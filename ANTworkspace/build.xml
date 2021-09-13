@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <project name="test" default="run" basedir=".">
 	<property name="x" value="10"/>
 	<property name="srcdir" value="src"/>
