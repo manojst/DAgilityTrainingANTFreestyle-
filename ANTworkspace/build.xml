@@ -5,8 +5,7 @@
 	<property name="builddir" value="build"/>
 	<property name="clsdir" value="classes"/>
 	<property name="jardir" value="jar"/>
-	<property name="filename" value="HelloWorld"/>
-	
+	<property name="filename" value="HelloWorld"/>	
 	<target name="test">
 		<echo> x value is ${x}</echo>
 	</target>
