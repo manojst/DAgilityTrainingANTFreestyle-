@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0"?>
 <project name="test" default="run">
 	<property name="x" value="10"/>
 	<property name="srcdir" value="src"/>
