@@ -1,16 +1,4 @@
-pipeline {
-  agent any
-  stages {
-    stage('Log Ant version info') {
-      steps {
-        sh 'ant -version'
-      }
-    }
-    stage('Ant Build') {
-      steps {
-        git 'https://gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingantfreestyle.git'
-        sh 'ant -f build.xml'
-      }
-    }
-  }
+def antVersion = 'Ant1.9.2'
+withAnt( ["ANT_HOME=${tool antVersion}"] ) {
+    sh "cd ${WORKSPACE}/ANTworkspace; $ANT_HOME/bin/ant target1 target2"
 }
